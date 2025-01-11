@@ -5,23 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aman Ali | Full-Stack Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
-    /* Custom Animations */
-    .fade-in {
-      animation: fadeIn 2s ease-in-out;
+    /* Custom Styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #e6f7ff, #fce4ec);
+      scroll-behavior: smooth;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    /* Skill Bars Animation */
+    .progress-bar {
+      width: 0%;
+      transition: width 2s ease-in-out;
+    }
+
+    /* Navbar Active Link Highlight */
+    .active-link {
+      color: #f28907 !important;
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-blue-50 to-pink-50 text-gray-800 font-sans scroll-smooth">
+<body class="text-gray-800">
 
   <!-- Header -->
   <header class="bg-gradient-to-b from-gray-800 to-gray-600 text-white py-10 text-center">
@@ -34,12 +39,12 @@
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
       <a href="#" class="text-xl font-bold">Portfolio</a>
       <ul class="hidden md:flex space-x-6">
-        <li><a href="#about" class="hover:text-yellow-400">About</a></li>
-        <li><a href="#skills" class="hover:text-yellow-400">Skills</a></li>
-        <li><a href="#experience" class="hover:text-yellow-400">Experience</a></li>
-        <li><a href="#portfolio" class="hover:text-yellow-400">Portfolio</a></li>
-        <li><a href="#certifications" class="hover:text-yellow-400">Certifications</a></li>
-        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+        <li><a href="#about" class="nav-link hover:text-yellow-400">About</a></li>
+        <li><a href="#skills" class="nav-link hover:text-yellow-400">Skills</a></li>
+        <li><a href="#experience" class="nav-link hover:text-yellow-400">Experience</a></li>
+        <li><a href="#portfolio" class="nav-link hover:text-yellow-400">Portfolio</a></li>
+        <li><a href="#certifications" class="nav-link hover:text-yellow-400">Certifications</a></li>
+        <li><a href="#contact" class="nav-link hover:text-yellow-400">Contact</a></li>
       </ul>
       <button id="menu-toggle" class="md:hidden block">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,7 +63,7 @@
   </nav>
 
   <!-- About Section -->
-  <section id="about" class="py-12 fade-in">
+  <section id="about" class="py-12" data-aos="fade-up">
     <div class="container mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">About Me</h2>
       <p class="text-lg leading-relaxed">
@@ -68,19 +73,24 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="bg-gray-100 py-12">
+  <section id="skills" class="bg-gray-100 py-12" data-aos="fade-up">
     <div class="container mx-auto">
       <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
           <h3 class="text-xl font-semibold mb-4">Technical Expertise</h3>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Programming Languages: JavaScript, Python, PHP, HTML5, CSS3, SQL</li>
-            <li>Frameworks & Libraries: React.js, Node.js, Express.js, Laravel</li>
-            <li>Database Management: MongoDB, MySQL, PostgreSQL</li>
-            <li>Cloud Platforms: AWS (EC2, S3), Firebase, Docker</li>
-            <li>Version Control: Git, GitHub, GitLab</li>
-          </ul>
+          <div class="relative">
+            <p>JavaScript</p>
+            <div class="bg-gray-300 rounded-full h-3 w-full">
+              <div class="progress-bar bg-yellow-400 rounded-full h-3 w-[90%]"></div>
+            </div>
+          </div>
+          <div class="relative mt-3">
+            <p>Python</p>
+            <div class="bg-gray-300 rounded-full h-3 w-full">
+              <div class="progress-bar bg-yellow-400 rounded-full h-3 w-[85%]"></div>
+            </div>
+          </div>
         </div>
         <div>
           <h3 class="text-xl font-semibold mb-4">Cybersecurity & Soft Skills</h3>
@@ -89,43 +99,6 @@
             <li>Certified Ethical Hacker (CEH)</li>
             <li>Secure Web Application Development</li>
             <li>Team Collaboration & Leadership</li>
-            <li>Agile & Scrum Methodologies</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="py-12 fade-in">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
-      <div class="space-y-8">
-        <div>
-          <h3 class="text-xl font-semibold">Technical Project Manager - Fone G Communications</h3>
-          <p class="text-sm text-gray-600">November 2022 - April 2023 (6 months)</p>
-          <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Managed cross-functional teams to deliver innovative web solutions.</li>
-            <li>Spearheaded technical design reviews, ensuring compliance with security and performance standards.</li>
-            <li>Enhanced client satisfaction through timely delivery of fully functional, secure applications.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">Cybersecurity Specialist - Zinger</h3>
-          <p class="text-sm text-gray-600">June 2021 - October 2021 (5 months)</p>
-          <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Conducted in-depth penetration testing and security audits for internal systems.</li>
-            <li>Designed and implemented robust security protocols to mitigate risks and enhance data protection.</li>
-            <li>Collaborated with developers to secure web applications against OWASP Top 10 vulnerabilities.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">Freelance Full-Stack Developer</h3>
-          <p class="text-sm text-gray-600">2019 - Present</p>
-          <ul class="list-disc pl-5 mt-2 space-y-1">
-            <li>Built and deployed over 15+ scalable web applications, catering to diverse industries.</li>
-            <li>Designed dynamic front-end interfaces with React.js and implemented RESTful APIs using Node.js.</li>
-            <li>Consulted startups on cybersecurity best practices and application architecture.</li>
           </ul>
         </div>
       </div>
@@ -133,7 +106,7 @@
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="bg-gray-100 py-12">
+  <section id="portfolio" class="bg-gray-100 py-12" data-aos="zoom-in">
     <div class="container mx-auto text-center">
       <h2 class="text-3xl font-bold mb-8">Portfolio</h2>
       <div class="space-y-8">
@@ -143,31 +116,12 @@
             Developed a multi-vendor marketplace using React.js and Node.js with secure payment integration via Stripe. Designed an intuitive UI and ensured seamless user experience and scalability.
           </p>
         </div>
-        <div>
-          <h3 class="text-xl font-semibold">AI Chatbot</h3>
-          <p>
-            Built a Python-based chatbot using Flask for customer service automation. The chatbot handled user queries efficiently, improving response times and enhancing customer satisfaction.
-          </p>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Certifications Section -->
-  <section id="certifications" class="py-12 fade-in">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8">Certifications</h2>
-      <ul class="list-disc mx-auto w-fit text-left">
-        <li>Certified Ethical Hacker (CEH) - EC-Council</li>
-        <li>Google Digital Garage - Fundamentals of Digital Marketing</li>
-        <li>CyberQuest - Cybersecurity Proficiency</li>
-        <li>Cisco Networking Academy - Introduction to Packet Tracer</li>
-      </ul>
-    </div>
-  </section>
-
   <!-- Contact Section -->
-  <section id="contact" class="py-12">
+  <section id="contact" class="py-12" data-aos="fade-up">
     <div class="container mx-auto text-center">
       <h2 class="text-3xl font-bold mb-8">Contact</h2>
       <p>Email: <a href="mailto:amanmohammedali@outlook.com" class="text-blue-600 underline">amanmohammedali@outlook.com</a></p>
@@ -181,13 +135,21 @@
     <p>© 2025 Aman Ali. All Rights Reserved.</p>
   </footer>
 
-  <!-- JavaScript for Mobile Menu -->
+  <!-- AOS (Animate on Scroll) and JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init(); // Initialize AOS animations
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
 
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    // Animate skill bars when scrolling into view
+    const skillBars = document.querySelectorAll('.progress-bar');
+    skillBars.forEach((bar) => {
+      bar.style.width = bar.getAttribute('data-width');
     });
   </script>
 </body>
