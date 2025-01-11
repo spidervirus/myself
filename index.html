@@ -7,20 +7,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
-    /* Custom Styles */
+    /* Custom Animations */
     body {
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to bottom, #e6f7ff, #fce4ec);
       scroll-behavior: smooth;
     }
-
-    /* Skill Bars Animation */
     .progress-bar {
       width: 0%;
       transition: width 2s ease-in-out;
     }
-
-    /* Navbar Active Link Highlight */
     .active-link {
       color: #f28907 !important;
     }
@@ -43,23 +39,11 @@
         <li><a href="#skills" class="nav-link hover:text-yellow-400">Skills</a></li>
         <li><a href="#experience" class="nav-link hover:text-yellow-400">Experience</a></li>
         <li><a href="#portfolio" class="nav-link hover:text-yellow-400">Portfolio</a></li>
-        <li><a href="#certifications" class="nav-link hover:text-yellow-400">Certifications</a></li>
+        <li><a href="#education" class="nav-link hover:text-yellow-400">Education</a></li>
+        <li><a href="#achievements" class="nav-link hover:text-yellow-400">Achievements</a></li>
         <li><a href="#contact" class="nav-link hover:text-yellow-400">Contact</a></li>
       </ul>
-      <button id="menu-toggle" class="md:hidden block">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
     </div>
-    <ul id="mobile-menu" class="hidden bg-gray-800 text-white space-y-4 p-6 md:hidden">
-      <li><a href="#about" class="hover:text-yellow-400 block">About</a></li>
-      <li><a href="#skills" class="hover:text-yellow-400 block">Skills</a></li>
-      <li><a href="#experience" class="hover:text-yellow-400 block">Experience</a></li>
-      <li><a href="#portfolio" class="hover:text-yellow-400 block">Portfolio</a></li>
-      <li><a href="#certifications" class="hover:text-yellow-400 block">Certifications</a></li>
-      <li><a href="#contact" class="hover:text-yellow-400 block">Contact</a></li>
-    </ul>
   </nav>
 
   <!-- About Section -->
@@ -67,7 +51,10 @@
     <div class="container mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">About Me</h2>
       <p class="text-lg leading-relaxed">
-        I am a driven and resourceful Full-Stack Developer with over 3 years of hands-on experience designing and developing high-performance web and mobile applications. I specialize in front-end and back-end development, database design, and cybersecurity. I am passionate about solving complex challenges and optimizing systems for scalability and security.
+        Driven and resourceful Full-Stack Developer with 3+ years of hands-on experience designing and developing
+        high-performance web and mobile applications. Proficient in cutting-edge technologies and frameworks, with
+        expertise spanning front-end and back-end development, database design, and cybersecurity. Passionate
+        about solving complex challenges and optimizing systems for scalability and security.
       </p>
     </div>
   </section>
@@ -75,22 +62,17 @@
   <!-- Skills Section -->
   <section id="skills" class="bg-gray-100 py-12" data-aos="fade-up">
     <div class="container mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+      <h2 class="text-3xl font-bold text-center mb-8">Key Skills</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
           <h3 class="text-xl font-semibold mb-4">Technical Expertise</h3>
-          <div class="relative">
-            <p>JavaScript</p>
-            <div class="bg-gray-300 rounded-full h-3 w-full">
-              <div class="progress-bar bg-yellow-400 rounded-full h-3 w-[90%]"></div>
-            </div>
-          </div>
-          <div class="relative mt-3">
-            <p>Python</p>
-            <div class="bg-gray-300 rounded-full h-3 w-full">
-              <div class="progress-bar bg-yellow-400 rounded-full h-3 w-[85%]"></div>
-            </div>
-          </div>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Programming Languages: JavaScript, Python, PHP, HTML5, CSS3, SQL</li>
+            <li>Frameworks & Libraries: React.js, Node.js, Express.js, Laravel</li>
+            <li>Database Management: MongoDB, MySQL, PostgreSQL</li>
+            <li>Cloud Platforms: AWS (EC2, S3), Firebase, Docker</li>
+            <li>Version Control: Git, GitHub, GitLab</li>
+          </ul>
         </div>
         <div>
           <h3 class="text-xl font-semibold mb-4">Cybersecurity & Soft Skills</h3>
@@ -98,25 +80,68 @@
             <li>Vulnerability Assessment & Penetration Testing (VAPT)</li>
             <li>Certified Ethical Hacker (CEH)</li>
             <li>Secure Web Application Development</li>
-            <li>Team Collaboration & Leadership</li>
+            <li>Agile & Scrum Methodologies</li>
+            <li>Client Communication & Stakeholder Management</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="bg-gray-100 py-12" data-aos="zoom-in">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8">Portfolio</h2>
-      <div class="space-y-8">
-        <div>
-          <h3 class="text-xl font-semibold">E-Commerce Platform</h3>
-          <p>
-            Developed a multi-vendor marketplace using React.js and Node.js with secure payment integration via Stripe. Designed an intuitive UI and ensured seamless user experience and scalability.
-          </p>
-        </div>
+  <!-- Experience Section -->
+  <section id="experience" class="py-12" data-aos="fade-up">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Professional Experience</h2>
+      <div>
+        <h3 class="text-xl font-semibold">Technical Project Manager - Fone G Communications</h3>
+        <p class="text-sm text-gray-600">November 2022 - April 2023 (6 months)</p>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>Managed and led cross-functional teams to deliver innovative web solutions.</li>
+          <li>Spearheaded technical design reviews, ensuring compliance with security and performance standards.</li>
+        </ul>
       </div>
+      <div class="mt-6">
+        <h3 class="text-xl font-semibold">Cybersecurity Specialist - Zinger</h3>
+        <p class="text-sm text-gray-600">June 2021 - October 2021 (5 months)</p>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>Conducted in-depth penetration testing and security audits for internal systems.</li>
+          <li>Designed robust security protocols to mitigate risks and enhance data protection.</li>
+        </ul>
+      </div>
+      <div class="mt-6">
+        <h3 class="text-xl font-semibold">Freelance Developer</h3>
+        <p class="text-sm text-gray-600">2019 - Present</p>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>Built and deployed 15+ scalable web applications, catering to diverse industries.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="bg-gray-100 py-12" data-aos="fade-up">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+      <div>
+        <h3 class="text-xl font-semibold">B.Sc. in Computer Science - Middlesex University Dubai</h3>
+        <p class="text-sm text-gray-600">Graduated: 2022</p>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li>E-Commerce Platform: Built a multi-vendor marketplace using React.js and Node.js, integrating Stripe.</li>
+          <li>AI Chatbot: Developed a Python chatbot using Flask for customer service automation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="py-12" data-aos="fade-up">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Achievements</h2>
+      <ul class="list-disc mx-auto w-fit text-left space-y-2">
+        <li>Reduced application load times by 40% through efficient code optimization.</li>
+        <li>Secured Top 10 placement in CyberQuest 2021 for developing innovative cybersecurity solutions.</li>
+        <li>Increased client retention by 30% through enhanced UX design and secure application deployments.</li>
+      </ul>
     </div>
   </section>
 
@@ -138,19 +163,7 @@
   <!-- AOS (Animate on Scroll) and JavaScript -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init(); // Initialize AOS animations
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Animate skill bars when scrolling into view
-    const skillBars = document.querySelectorAll('.progress-bar');
-    skillBars.forEach((bar) => {
-      bar.style.width = bar.getAttribute('data-width');
-    });
+    AOS.init();
   </script>
 </body>
 </html>
